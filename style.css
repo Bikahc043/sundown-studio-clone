@@ -1,0 +1,241 @@
+    *{
+           margin: 0;
+           padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html , body{
+        height: 100%;
+        width: 100%;
+    }
+    main{
+        background-color: black;
+        z-index: 10;
+    }
+    #page1{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        position: relative;
+        padding: 0 2vw;
+    }
+    nav{
+        padding: 2vw 2vw;
+        height: 100px;
+        width: 100%;
+        /*background-color: rgb(245, 245, 245);*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #nav-part2{
+        display:flex;
+        align-items: center;
+        gap: 1vw;
+    }
+    
+    #nav-part2 h4{
+        padding: 10px 20px;
+        border: 1px solid #8b8787;
+        border-radius: 50px;
+        font-weight: 500;
+        color: rgb(10, 10, 10);
+        transition: all ease 0.4s;
+        position: relative;
+        font-size: 18px;
+        overflow: hidden;
+    }
+    #nav-part2 h4::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        left: 0;
+        bottom: -100%;
+        border-radius: 50%;
+        transition: all ease 0.4s;
+    }
+    #nav-part2 h4:hover::after{
+        bottom: 0;
+        border-radius:0;
+    }
+    #nav-part2 h4 a{
+        color: black;
+        text-decoration: none;
+        position: relative;
+        z-index: 9;
+
+    }
+    #nav-part2 h4:hover a{
+        color:#fff;
+    }
+ #center{
+    height: 50vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #918a8a;
+    padding: 2.5vw;
+ }
+ #left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+
+ }
+#right h1{
+    font-size: 5vw;
+    text-align: right;
+    line-height: 7vw;
+}
+#page1 video {
+    border-radius: 20px;
+    margin-top: 5vw;
+    width: 100%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+}
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display:inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+#dot{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display:inline-block;
+    background-color: #FE330A;
+    margin: 1vw 2vw;
+}
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    background-color: EFEAE3;
+    padding: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2-bottom h2{
+    font-size: 4vw;
+    line-height: 3.5vw;
+}
+#bottom-part2 img{
+    width: 25vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+#bottom-part2 p{
+    margin-top: 1vw;
+    margin-right: 5vw;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+.elem{
+    height:100px;
+    width:100%;
+    border-bottom: 1px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+.elem h2{
+     font-size: 2vw;
+     position: relative;
+     z-index: 9;
+
+}
+
+.elem .overlay{
+    height:100%;
+    width: 100%;
+    background-color:orange;
+    position: absolute;
+    left:0;
+    top:-100%;
+    transition: all ease 0.3s;
+
+}
+.elem:hover .overlay{
+    top:0;
+}
+
+#elem-container{
+
+}
+#fixed-image{
+    height: 25vw;
+    width: 20vw;
+    border-radius: 6%;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top:27%;
+    display: none;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+}
+#footer{
+    position: fixed
+    ;
+    height: 100vh;
+    width:100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+#footer h1{
+    font-size: 25vw;
+
+
+}
